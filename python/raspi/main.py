@@ -127,11 +127,11 @@ while not motor_serial.shutdown_now:
 
     print("Left:", left, "   Right:", right, "   Front:", front, "   Rear:", rear)
 
-    if left < 25 and front < 25 and right < 25:
+    if left < 30 and front < 30 and right < 30:
         check_surrounding()
-    elif left < 15 or front < 15:
+    elif left < 20 or front < 15:
         turn_hard_right(0.1)
-    elif left > 15 and left < 25:
+    elif left > 20 and left < 25:
         turn_right(0.1)
     elif left > 25 and left < 50:
         drive_robot(FORWARDS, 0.1)
