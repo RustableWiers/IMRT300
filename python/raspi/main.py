@@ -126,7 +126,7 @@ while not motor_serial.shutdown_now:
     rear = motor_serial.get_dist_4()
 
     print("Left:", left, "   Right:", right, "   Front:", front, "   Rear:", rear)
-    if left < 3 or front < 3:
+    if left < 4 or front < 4:
         drive_backwards(0.1)
     elif left < 30 and front < 30 and right < 30:
         check_surrounding()
